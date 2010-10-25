@@ -16,7 +16,14 @@ public final class Icons
   {
     ImageIcon icon = ICONMAP.get(name);
     if (icon == null) {
-      icon = new ImageIcon(Icons.class.getResource(name));
+      java.net.URL resource = Icons.class.getResource(name);
+      if (resource == null) {
+        icon = new ImageIcon();
+        System.err.println("Icon file not found: " + name);
+      }
+      else {
+        icon = new ImageIcon(resource);
+      }
       ICONMAP.put(name, icon);
     }
     return icon;
