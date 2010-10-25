@@ -91,7 +91,7 @@ public final class StructViewer extends JPanel implements ListSelectionListener,
   private final CardLayout cards = new CardLayout();
   private final JButton bview = new JButton("View/Edit", Icons.getIcon("Zoom16.gif"));
   private final JButton bexport = new JButton("Export...", Icons.getIcon("Export16.gif"));
-  private final JButton bprint = new JButton(Icons.getIcon("Print16.gif"));
+  private final JButton bprint = new JButton("Print", Icons.getIcon("Print16.gif"));
   private final JButton bremove = new JButton("Remove", Icons.getIcon("Remove16.gif"));
   private final JMenuItem ifindattribute = new JMenuItem("selected attribute");
   private final JMenuItem ifindreferences = new JMenuItem("references to this file");
